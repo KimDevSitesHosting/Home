@@ -64,30 +64,37 @@
         </div>
     </nav>
 
-    <header id="home" class="py-24 text-center">
+    <header id="home" class="py-20 text-center">
         <div class="max-w-7xl mx-auto px-4">
             <h1 class="text-5xl font-light text-gray-900 mb-6">KimTeamWork</h1>
             <p class="text-lg text-gray-500 max-w-xl mx-auto font-light">ยกระดับศักยภาพดิจิทัลด้วยเครื่องมืออัจฉริยะจากทีมงานคุณภาพ</p>
         </div>
     </header>
 
-    <hr class="max-w-4xl mx-auto border-gray-100">
+    <hr class="max-w-5xl mx-auto border-gray-100">
 
-    <main id="services" class="max-w-5xl mx-auto py-24 px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+    <main id="services" class="max-w-7xl mx-auto py-20 px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
             
-            <div class="text-center flex flex-col items-center">
+            <div class="text-center flex flex-col items-center p-6 border border-transparent hover:border-gray-50 rounded-2xl transition-all">
                 <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-3xl mb-6 shadow-sm">🛡️</div>
-                <h3 class="text-2xl font-medium mb-3">Recaptha</h3>
-                <p class="text-gray-500 mb-6 font-light h-12">ระบบคัดกรองบอทอัจฉริยะ เพื่อความปลอดภัยของเว็บไซต์คุณ</p>
-                <a href="https://sites.google.com/view/kimteamwork-recaptha/home-page" target="_blank" class="text-blue-600 font-medium hover:text-blue-800 transition-all">เข้าใช้งานบริการนี้ →</a>
+                <h3 class="text-xl font-medium mb-3">Recaptha</h3>
+                <p class="text-gray-500 mb-6 font-light text-sm h-12">ระบบคัดกรองบอทอัจฉริยะ เพื่อความปลอดภัยของเว็บไซต์คุณ</p>
+                <a href="https://sites.google.com/view/kimteamwork-recaptha/home-page" target="_blank" class="text-blue-600 text-sm font-medium hover:text-blue-800 transition-all">เข้าใช้งานบริการนี้ →</a>
             </div>
 
-            <div class="text-center flex flex-col items-center">
+            <div class="text-center flex flex-col items-center p-6 border border-transparent hover:border-gray-50 rounded-2xl transition-all">
                 <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-3xl mb-6 shadow-sm">🌐</div>
-                <h3 class="text-2xl font-medium mb-3">KimTeamWork Translator</h3>
-                <p class="text-gray-500 mb-6 font-light h-12">เครื่องมือแปลภาษาที่รวดเร็วและแม่นยำ พร้อมใช้งานทันที</p>
-                <a href="https://kimdevsiteshosting.github.io/kimteamworktranslator/" target="_blank" class="text-blue-600 font-medium hover:text-blue-800 transition-all">เข้าใช้งานบริการนี้ →</a>
+                <h3 class="text-xl font-medium mb-3">KimTeamWork Translator</h3>
+                <p class="text-gray-500 mb-6 font-light text-sm h-12">เครื่องมือแปลภาษาที่รวดเร็วและแม่นยำ พร้อมใช้งานทันที</p>
+                <a href="https://kimdevsiteshosting.github.io/kimteamworktranslator/" target="_blank" class="text-blue-600 text-sm font-medium hover:text-blue-800 transition-all">เข้าใช้งานบริการนี้ →</a>
+            </div>
+
+            <div class="text-center flex flex-col items-center p-6 border border-transparent hover:border-gray-50 rounded-2xl transition-all">
+                <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-3xl mb-6 shadow-sm">📝</div>
+                <h3 class="text-xl font-medium mb-3">NotepadOnline</h3>
+                <p class="text-gray-500 mb-6 font-light text-sm h-12">จดบันทึกความคิดและข้อมูลสำคัญของคุณได้ทุกที่ ทุกเวลา ผ่านเบราว์เซอร์</p>
+                <a href="https://kimdevsiteshosting.github.io/notepadonline/" target="_blank" class="text-blue-600 text-sm font-medium hover:text-blue-800 transition-all">เข้าใช้งานบริการนี้ →</a>
             </div>
 
         </div>
@@ -115,26 +122,20 @@
     </footer>
 
     <script>
-        // ฟังก์ชันเปิด/ปิดเมนูบนมือถือ
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         }
 
-        // ฟังก์ชันคัดลอกอีเมลลง Clipboard
         function copyEmail() {
             const email = "kimteamwork.dev@gmail.com";
             navigator.clipboard.writeText(email).then(() => {
                 const toast = document.getElementById("toast");
                 toast.className = "show";
-                // ซ่อนข้อความแจ้งเตือนหลังจาก 3 วินาที
                 setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
-            }).catch(err => {
-                console.error('ไม่สามารถคัดลอกได้:', err);
             });
         }
     </script>
 
 </body>
 </html>
-
